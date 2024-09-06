@@ -1,6 +1,6 @@
-# YOLOv8 Android App - TFLite
+# TensorFlow to PyTorch Project
 
-This repository contains an Android application utilizing a TensorFlow Lite model based on YOLOv8 for object detection.
+This repository contains an Android application utilizing a PyTorch model converted from TensorFlow for object detection.
 
 ## Table of Contents
 
@@ -10,20 +10,20 @@ This repository contains an Android application utilizing a TensorFlow Lite mode
 - [Usage](#usage)
 - [Model Conversion](#model-conversion)
 - [Model Details](#model-details)
-- [TensorFlow Lite Integration](#tensorflow-lite-integration)
-- [Creating Your Own YOLOv8 Model](#creating-your-own-yolov8-model)
+- [PyTorch Integration](#pytorch-integration)
+- [Creating Your Own PyTorch Model](#creating-your-own-pytorch-model)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
-The YOLOv8 Android App is a mobile application designed for real-time object detection using the YOLOv8 model. This project exemplifies the integration of TensorFlow Lite (TFLite) with an Android application to deliver efficient and accurate object detection on mobile devices.
+The **TensorFlow to PyTorch Project** is a mobile application designed for real-time object detection using a PyTorch model converted from TensorFlow. This project demonstrates the integration of PyTorch with an Android application to deliver efficient and accurate object detection on mobile devices.
 
 ## Features
 
-- Real-time object detection powered by YOLOv8
-- Efficient processing with TensorFlow Lite
+- Real-time object detection powered by PyTorch
+- Efficient processing with PyTorch on Android
 - Intuitive and user-friendly interface
 
 ## Installation
@@ -37,8 +37,8 @@ The YOLOv8 Android App is a mobile application designed for real-time object det
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/superbabii/YOLOv8-AndroidApp.git
-    cd YOLOv8-AndroidApp
+    git clone https://github.com/superbabii/TensorFlow-to-PyTorch-Project.git
+    cd TensorFlow-to-PyTorch-Project
     ```
 
 2. **Open the project in Android Studio:**
@@ -57,7 +57,7 @@ The YOLOv8 Android App is a mobile application designed for real-time object det
 
 ## Model Conversion
 
-To convert the YOLOv8 model to TensorFlow Lite, follow the steps outlined in the `model_conversion.ipynb` notebook available on Google Drive.
+To convert a TensorFlow model to PyTorch, follow the steps outlined in the `model_conversion.ipynb` notebook available on Google Drive.
 
 ### Steps
 
@@ -69,33 +69,31 @@ To convert the YOLOv8 model to TensorFlow Lite, follow the steps outlined in the
 
 3. **Run the notebook:**
     Follow the instructions in the notebook to:
-    - Export the YOLOv8 model.
-    - Convert the exported model to TensorFlow Lite format.
+    - Export the TensorFlow model.
+    - Convert the exported model to PyTorch format.
 
-4. **Download the TFLite model:**
-    Once the conversion is complete, download the `.tflite` file.
+4. **Download the PyTorch model:**
+    Once the conversion is complete, download the `.pt` file.
 
-5. **Move the TFLite model to the Android project:**
+5. **Move the PyTorch model to the Android project:**
     - Navigate to the Android project directory: `app/src/main/assets/`.
-    - Replace the existing `model.tflite` file with the downloaded `.tflite` file.
-
-   * The default model in `app/src/main/assets/` is converted from [yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt).
+    - Replace the existing `model.pt` file with the downloaded `.pt` file.
 
 ## Model Details
 
-The app employs a pre-trained YOLOv8 model converted to TensorFlow Lite format. YOLOv8 is renowned for its balance between speed and accuracy, making it ideal for mobile applications.
+The app employs a pre-trained TensorFlow model converted to PyTorch format, ensuring high-speed and accurate detection for mobile applications.
 
-## TensorFlow Lite Integration
+## PyTorch Integration
 
-The TensorFlow Lite model's input and output tensor formats are as follows:
-- **Input tensor:** float32[1, 640, 640, 3] or float32[1, 3, 640, 640]
+The PyTorch model's input and output tensor formats are as follows:
+- **Input tensor:** float32[1, 640, 640, 3]
 - **Output tensor:** float32[1, 84, 8400]
 
-This integration eliminates concerns related to the tensor format or metadata issues previously encountered with [TensorFlow Lite's object detection example for Android](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android).
+This integration avoids concerns related to the tensor format or metadata issues.
 
-## Creating Your Own YOLOv8 Model
+## Creating Your Own PyTorch Model
 
-You can also customize the YOLOv8 model to suit your specific needs. For instance, you can use the VisDrone dataset to create a YOLOv8 model. Please refer to the [VisDrone YOLOv8 Models Upgrade](https://github.com/superbabii/VisDrone-YOLOv8-Models-Upgrade) repository for detailed instructions.
+You can also customize the PyTorch model to suit your specific needs. For instance, you can use the VisDrone dataset to create a PyTorch model. Please refer to the [VisDrone PyTorch Models Upgrade](https://github.com/superbabii/VisDrone-PyTorch-Models-Upgrade) repository for detailed instructions.
 
 ## Contributing
 
@@ -113,7 +111,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-- [YOLOv8](https://github.com/ultralytics/ultralytics) for the object detection model.
-- [TensorFlow Lite](https://www.tensorflow.org/lite) for providing the framework to run the model on mobile devices.
+- [TensorFlow](https://www.tensorflow.org) and [PyTorch](https://pytorch.org) for the object detection models.
 - [Android Studio](https://developer.android.com/studio) for the development environment.
 - [Google Colab](https://colab.research.google.com) for providing a cloud-based Jupyter notebook environment.
