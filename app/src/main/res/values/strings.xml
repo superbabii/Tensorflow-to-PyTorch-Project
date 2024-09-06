@@ -1,0 +1,58 @@
+<resources>
+    <!-- Application name -->
+    <string name="app_name">Alta Ares</string>
+
+    <!-- Toggle button text for GPU usage -->
+    <string name="gpu">Use GPU</string>
+
+    <!-- Additional strings for better user interface and messages -->
+    <string name="cpu">Use CPU</string>
+<!--    <string name="inference_time">Inference Time: %1$d ms</string>-->
+    <string name="no_detection">No objects detected</string>
+    <string name="detection_error">Error during detection</string>
+
+    <!-- Button labels -->
+    <string name="start_detection">Start Detection</string>
+    <string name="stop_detection">Stop Detection</string>
+
+    <!-- Additional placeholder for future localization -->
+    <!-- <string name="another_string">Placeholder for another string</string> -->
+
+    <!-- Application's general messages -->
+    <string name="loading">Loading...</string>
+    <string name="please_wait">Please wait</string>
+
+    <string name="alt_bottom_sheet_chevron">Bottom sheet expandable indicator</string>
+
+    <string name="alt_bottom_sheet_max_results_button_minus">Decreasing maxium detected results
+        button</string>
+    <string name="alt_bottom_sheet_max_results_button_plus">Increasing maxium detected results
+        button</string>
+    <string name="alt_bottom_sheet_threshold_button_minus">Decreasing threshold of detected object
+        results button</string>
+    <string name="alt_bottom_sheet_threshold_button_plus">Increasing threshold of detected object
+        results button</string>
+    <string name="alt_bottom_sheet_thread_button_minus">Decrease the number of threads used</string>
+    <string name="alt_bottom_sheet_thread_button_plus">Increase the number of threads used</string>
+
+    <string name="label_interence_time">Inference Time</string>
+    <string name="label_fps">Frames per Second</string>
+    <string name="label_confidence_threshold">Threshold</string>
+    <string name="label_max_results">Max Results</string>
+    <string name="label_threads">Number of Threads</string>
+    <string name="label_delegate">Delegate</string>
+    <string name="label_models">ML Model</string>
+
+    <string-array name="delegate_spinner_titles">
+        <item>CPU</item>
+        <item>GPU</item>
+        <item>NNAPI</item>
+    </string-array>
+
+    <string-array name="models_spinner_titles">
+        <item>MobileNet V1</item>
+        <item>EfficientDet Lite0</item>
+        <item>EfficientDet Lite1</item>
+        <item>EfficientDet Lite2</item>
+    </string-array>
+</resources>
